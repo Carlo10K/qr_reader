@@ -4,7 +4,7 @@ import 'package:qr_scanner_sqlite/pages/home_page.dart';
 import 'package:qr_scanner_sqlite/pages/map_page.dart';
 import 'package:qr_scanner_sqlite/providers/ui_provider.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});

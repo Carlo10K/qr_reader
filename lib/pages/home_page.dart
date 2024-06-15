@@ -33,7 +33,7 @@ class HomeScreen extends StatelessWidget {
 }
 
 class _HomePageBody extends StatelessWidget {
-  const _HomePageBody({super.key});
+  const _HomePageBody();
 
   @override
   Widget build(BuildContext context) {
