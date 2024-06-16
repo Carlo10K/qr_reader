@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_barcode_scanner/flutter_barcode_scanner.dart';
+//import 'package:flutter_barcode_scanner/flutter_barcode_scanner.dart';
 
 class ScanButton extends StatelessWidget {
   const ScanButton({super.key});
@@ -18,5 +18,5 @@ class ScanButton extends StatelessWidget {
           String barcodeScanRes = 'https://fernando-herrera.com';
           print('resultado del scan:' + barcodeScanRes);
         });
-  } 
+  }
 }
