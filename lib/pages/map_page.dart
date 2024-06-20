@@ -25,16 +25,39 @@ class _MapScreenState extends State<MapScreen> {
       tilt: 50,
     );
 
+    //marcador
+    Set<Marker> markers = <Marker>{};
+    markers.add(Marker(
+        markerId: MarkerId('geo-location'), position: scanModel.getLatLng()));
+
     return Scaffold(
       appBar: AppBar(
         title: const Text('Mapa'),
+        actions: [
+          IconButton(
+              onPressed: () async {
+                final GoogleMapController controller = await _controller.future;
+                await controller.animateCamera(
+                    CameraUpdate.newCameraPosition(initialPoint));
+              },
+              icon: const Icon(Icons.location_searching))
+        ],
       ),
       body: GoogleMap(
         mapType: MapType.normal,
+        markers: markers,
         initialCameraPosition: initialPoint,
         onMapCreated: (GoogleMapController controller) {
           _controller.complete(controller);
         },
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.startFloat,
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        child: const Icon(
+          Icons.layers,
+          color: Colors.white,
+        ),
       ),
     );
   }
