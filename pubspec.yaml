@@ -42,6 +42,7 @@ dependencies:
 
   path: any
   url_launcher: ^6.3.0
+  google_maps_flutter: ^2.7.0
 dev_dependencies:
   flutter_test:
     sdk: flutter

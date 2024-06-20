@@ -5,6 +5,8 @@
         android:label="qr_scanner_sqlite"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
+        <meta-data android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyDd22tDBjW8yAU00GxNkxdQwh8GH1lbKeg" />
         <activity
             android:name=".MainActivity"
             android:exported="true"
