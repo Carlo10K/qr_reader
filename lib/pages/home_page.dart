@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:qr_scanner_sqlite/pages/adresses_page.dart';
 import 'package:qr_scanner_sqlite/pages/maps_page.dart';
-import 'package:qr_scanner_sqlite/providers/db_provider.dart';
 import 'package:qr_scanner_sqlite/providers/scan_list_provider.dart';
 import 'package:qr_scanner_sqlite/providers/ui_provider.dart';
 import 'package:qr_scanner_sqlite/widgets/custom_navigator_bar.dart';
@@ -19,7 +18,10 @@ class HomeScreen extends StatelessWidget {
         title: const Text('Historial'),
         actions: [
           IconButton(
-              onPressed: () {},
+              onPressed: () {
+                Provider.of<ScanListProvider>(context, listen: false)
+                    .deleteAll();
+              },
               icon: const Icon(
                 Icons.delete_forever,
                 color: Colors.white,
